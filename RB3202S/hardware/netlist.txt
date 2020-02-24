@@ -1,0 +1,436 @@
+Netlist
+
+Exported from SchoolBoard.brd at 2/18/2020 20:38
+
+EAGLE Version 9.4.2 Copyright (c) 1988-2019 Autodesk, Inc.
+
+Net         Part     Pad
+
++3V3        C13      1
+            C15      1
+            C17      1
+            IM6      1
+            JP5      10
+            JP5      12
+            JP5      14
+            JP5      16
+            JP5      18
+            JP5      2
+            JP5      20
+            JP5      22
+            JP5      24
+            JP5      26
+            JP5      28
+            JP5      30
+            JP5      4
+            JP5      6
+            JP5      8
+            Q2       1
+            Q4       1
+            Q5       1
+            Q7       1
+            R2       1
+            R22      2
+            R23      2
+            R8       2
+            U1       13
+            U1       8
+            U1       9
+
++5V         C16      1
+            IC1      2
+            IC1      4
+            IM6      19
+            JP12     5
+            JP16     2
+            JP6      2
+            R20      1
+
++5VA        C7       +
+            IC2      2
+            IC2      4
+            JP1      2
+            JP1      4
+            JP1      6
+            JP1      8
+            R10      1
+            R6       1
+            R7       1
+            R9       1
+
+AUX_CL      U1       7
+
+AUX_DA      U1       6
+
+BAT1        Q3       5
+            Q3       6
+            Q3       7
+            Q3       8
+            Q3       9
+            X4       2
+
+BAT_POL+    Q1       1
+            Q1       2
+            Q1       3
+            Q3       1
+            Q3       2
+            Q3       3
+            R3       1
+
+EN          IM6      2
+            JP16     4
+            R8       1
+
+ENC_A1      IM6      26
+            JP12     3
+
+ENC_A2      IM6      30
+            JP6      4
+
+ENC_B1      IM6      23
+            JP12     4
+
+ENC_B2      IM6      31
+            JP6      3
+
+GND         BOOT     1
+            BOOT     2
+            C10      2
+            C11      2
+            C12      2
+            C13      2
+            C14      2
+            C15      2
+            C16      2
+            C17      2
+            C2       2
+            C3       1
+            C4       1
+            C5       1
+            C6       -
+            C7       -
+            C8       1
+            C9       2
+            D1       A
+            IC1      1
+            IC2      1
+            IM6      14
+            IM6      32
+            IM6      38
+            JP12     2
+            JP16     1
+            JP16     3
+            JP16     5
+            JP16     7
+            JP4      1
+            JP4      3
+            JP4      5
+            JP4      7
+            JP42     1
+            JP47     1
+            JP48     1
+            JP5      1
+            JP5      11
+            JP5      13
+            JP5      15
+            JP5      17
+            JP5      19
+            JP5      21
+            JP5      23
+            JP5      25
+            JP5      27
+            JP5      29
+            JP5      3
+            JP5      5
+            JP5      7
+            JP5      9
+            JP6      5
+            JP7      1
+            JP7      2
+            JP7      3
+            JP7      4
+            JP9      2
+            JP9      4
+            JP9      6
+            JP9      8
+            LED0     C
+            LED1     C
+            LED2     C
+            LED3     C
+            ON       1
+            ON       2
+            Q3       4
+            Q6       2
+            R1       2
+            R11      2
+            R21      2
+            SW0      1
+            SW0      2
+            SW1      1
+            SW1      2
+            SW2      1
+            SW2      2
+            SW3      1
+            SW3      2
+            U$9      AISEN
+            U$9      BISEN
+            U$9      GND
+            U1       1
+            U1       11
+            U1       18
+            X4       1
+
+GPIO12      IM6      13
+            JP2      6
+            JP8      6
+            Q7       2
+            R14      1
+
+GPIO14      IM6      12
+            JP2      7
+            JP8      7
+            Q5       2
+
+GPIO14_5V   JP1      5
+            JP3      3
+            Q5       3
+            R7       2
+
+GPIO21      IM6      33
+            JP2      5
+            JP8      5
+            R17      1
+
+GPIO25      IM6      9
+            JP2      10
+            JP8      10
+            R13      1
+
+GPIO26      IM6      10
+            JP2      9
+            JP8      9
+            R16      1
+
+GPIO27      IM6      11
+            JP2      8
+            JP8      8
+            R15      1
+
+GPIO32      IM6      7
+            JP2      12
+            JP8      12
+            Q2       2
+
+GPIO32-5V   JP1      7
+            JP3      4
+            Q7       3
+            R10      2
+
+GPIO33      IM6      8
+            JP2      11
+            JP8      11
+            Q4       2
+
+GPIO33-5V   JP1      3
+            JP3      2
+            Q4       3
+            R6       2
+
+GPIO34      IM6      5
+            R12      2
+
+GPIO35      IM6      6
+            JP2      13
+            JP42     3
+            JP47     3
+            JP48     3
+            JP8      13
+
+GPIO36      IM6      3
+            JP2      15
+            JP8      15
+            R18      1
+
+GPIO39      IM6      4
+            JP2      14
+            JP8      14
+            R19      1
+
+INT_MPU5060 JP10     1
+            U1       12
+
+IO1         IM6      35
+            JP2      3
+            JP8      3
+
+IO3         IM6      34
+            JP2      4
+            JP8      4
+
+IO9_NC      IM6      16
+
+IO9_NC1     IM6      20
+
+IO9_NC2     U$9      NFAULT
+
+IO9_NC4     U1       19
+
+IO9_NC5     U1       21
+
+IO10_NC     IM6      17
+
+IO10_NC1    IM6      21
+
+IO10_NC4    U1       22
+
+IO11_NC     IM6      18
+
+IO11_NC1    IM6      22
+
+LED0        JP9      1
+            LED0     A
+            R17      2
+
+LED1        JP9      3
+            LED1     A
+            R18      2
+
+LED2        JP9      5
+            LED2     A
+            R19      2
+
+LED3        LED3     A
+            R20      2
+
+M1A         JP12     6
+            U$9      AOUT1
+            X1       1
+
+M1B         JP12     1
+            U$9      AOUT2
+            X1       2
+
+M2A         JP6      1
+            U$9      BOUT1
+            X2       2
+
+M2B         JP6      6
+            U$9      BOUT2
+            X2       1
+
+N$1         R11      1
+            R12      1
+            R5       2
+
+N$2         LED4     C
+            R21      1
+
+N$3         C12      1
+            U1       20
+
+N$4         C14      1
+            U1       10
+
+N$5         JP1      1
+            JP3      1
+            Q2       3
+            R9       2
+
+N$23        C9       1
+            U$9      VINT
+
+N$25        C23      1
+            U$9      VCP
+
+OFF         BOOT     3
+            BOOT     4
+            C2       1
+            IM6      15
+            JP16     8
+            Q6       1
+            R1       1
+            R2       2
+
+ON          C1       2
+            JP16     6
+            ON       3
+            ON       4
+            R4       2
+
+PWM_A0      IM6      25
+            U$9      AIN1
+
+PWM_A1      IM6      27
+            U$9      AIN2
+
+PWM_B0      IM6      29
+            U$9      BIN1
+
+PWM_B1      IM6      28
+            U$9      BIN2
+
+SCL         IM6      36
+            JP2      2
+            JP8      2
+            R23      1
+            U1       23
+
+SDA         IM6      37
+            JP2      1
+            JP8      1
+            R22      1
+            U1       24
+
+SLEEP       IM6      24
+            U$9      NSLEEP
+
+START_GATE1 C1       1
+            Q1       4
+            Q6       3
+            R3       2
+            R4       1
+
+SW0         C5       2
+            JP4      8
+            R13      2
+            SW0      3
+            SW0      4
+
+SW1         C3       2
+            JP4      6
+            R14      2
+            SW1      3
+            SW1      4
+
+SW2         C4       2
+            JP4      4
+            R15      2
+            SW2      3
+            SW2      4
+
+SW3         C8       2
+            JP4      2
+            R16      2
+            SW3      3
+            SW3      4
+
+VCC         C10      1
+            C11      1
+            C23      2
+            C6       +
+            D1       C
+            IC1      3
+            IC2      3
+            JP42     2
+            JP47     2
+            JP48     2
+            JP9      7
+            LED4     A
+            Q1       5
+            Q1       6
+            Q1       7
+            Q1       8
+            Q1       9
+            R5       1
+            U$9      VM
+
