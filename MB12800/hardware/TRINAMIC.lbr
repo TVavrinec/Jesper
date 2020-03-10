@@ -150,9 +150,40 @@
 <wire x1="20.32" y1="-27.94" x2="20.32" y2="25.4" width="0.1524" layer="94"/>
 <wire x1="20.32" y1="25.4" x2="-20.32" y2="25.4" width="0.1524" layer="94"/>
 </symbol>
+<symbol name="TCM2208">
+<pin name="VCC_IN" x="-7.62" y="30.48" length="middle" rot="R270"/>
+<pin name="VS" x="0" y="30.48" length="middle" rot="R270"/>
+<pin name="GND" x="0" y="-33.02" length="middle" rot="R90"/>
+<pin name="CPO" x="25.4" y="17.78" length="middle" rot="R180"/>
+<pin name="CPI" x="25.4" y="15.24" length="middle" rot="R180"/>
+<pin name="OA1" x="25.4" y="5.08" length="middle" rot="R180"/>
+<pin name="OA2" x="25.4" y="2.54" length="middle" rot="R180"/>
+<pin name="BRA" x="25.4" y="0" length="middle" rot="R180"/>
+<pin name="OB1" x="25.4" y="-5.08" length="middle" rot="R180"/>
+<pin name="OB2" x="25.4" y="-7.62" length="middle" rot="R180"/>
+<pin name="BRB" x="25.4" y="-10.16" length="middle" rot="R180"/>
+<pin name="ENN" x="-25.4" y="-20.32" length="middle"/>
+<pin name="VCC_IO" x="-25.4" y="-15.24" length="middle"/>
+<pin name="CLK_IN" x="-25.4" y="-10.16" length="middle"/>
+<pin name="INDEX" x="-25.4" y="-5.08" length="middle"/>
+<pin name="DIAG" x="-25.4" y="-2.54" length="middle"/>
+<pin name="PDN/UART" x="-25.4" y="2.54" length="middle"/>
+<pin name="MS2" x="-25.4" y="7.62" length="middle"/>
+<pin name="MS1" x="-25.4" y="10.16" length="middle"/>
+<pin name="DIR" x="-25.4" y="15.24" length="middle"/>
+<pin name="STEP" x="-25.4" y="17.78" length="middle"/>
+<pin name="5VOUT" x="-7.62" y="-33.02" length="middle" rot="R90"/>
+<pin name="VREF" x="25.4" y="-20.32" length="middle" rot="R180"/>
+<pin name="VCP" x="7.62" y="30.48" length="middle" rot="R270"/>
+<pin name="DIE_PAD" x="7.62" y="-33.02" length="middle" rot="R90"/>
+<wire x1="-20.32" y1="25.4" x2="-20.32" y2="-27.94" width="0.1524" layer="94"/>
+<wire x1="-20.32" y1="-27.94" x2="20.32" y2="-27.94" width="0.1524" layer="94"/>
+<wire x1="20.32" y1="-27.94" x2="20.32" y2="25.4" width="0.1524" layer="94"/>
+<wire x1="20.32" y1="25.4" x2="-20.32" y2="25.4" width="0.1524" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="TMC2224" prefix="ST">
+<deviceset name="TMC2224" prefix="TMC">
 <gates>
 <gate name="G$1" symbol="TMC2224" x="0" y="0"/>
 </gates>
@@ -179,6 +210,45 @@
 <connect gate="G$1" pin="OB2" pad="13"/>
 <connect gate="G$1" pin="PDN/UART" pad="20"/>
 <connect gate="G$1" pin="SPREAD" pad="22"/>
+<connect gate="G$1" pin="STEP" pad="25"/>
+<connect gate="G$1" pin="VCC_IN" pad="16"/>
+<connect gate="G$1" pin="VCC_IO" pad="19"/>
+<connect gate="G$1" pin="VCP" pad="6"/>
+<connect gate="G$1" pin="VREF" pad="15"/>
+<connect gate="G$1" pin="VS" pad="7 14"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TMC2208" prefix="TMC">
+<gates>
+<gate name="G$1" symbol="TCM2208" x="0" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="QFN28">
+<connects>
+<connect gate="G$1" pin="5VOUT" pad="18"/>
+<connect gate="G$1" pin="BRA" pad="9"/>
+<connect gate="G$1" pin="BRB" pad="12"/>
+<connect gate="G$1" pin="CLK_IN" pad="27"/>
+<connect gate="G$1" pin="CPI" pad="5"/>
+<connect gate="G$1" pin="CPO" pad="4"/>
+<connect gate="G$1" pin="DIAG" pad="21"/>
+<connect gate="G$1" pin="DIE_PAD" pad="PAD"/>
+<connect gate="G$1" pin="DIR" pad="23"/>
+<connect gate="G$1" pin="ENN" pad="24"/>
+<connect gate="G$1" pin="GND" pad="3 17"/>
+<connect gate="G$1" pin="INDEX" pad="2"/>
+<connect gate="G$1" pin="MS1" pad="28"/>
+<connect gate="G$1" pin="MS2" pad="1"/>
+<connect gate="G$1" pin="OA1" pad="10"/>
+<connect gate="G$1" pin="OA2" pad="8"/>
+<connect gate="G$1" pin="OB1" pad="11"/>
+<connect gate="G$1" pin="OB2" pad="13"/>
+<connect gate="G$1" pin="PDN/UART" pad="20"/>
 <connect gate="G$1" pin="STEP" pad="25"/>
 <connect gate="G$1" pin="VCC_IN" pad="16"/>
 <connect gate="G$1" pin="VCC_IO" pad="19"/>
