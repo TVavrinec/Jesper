@@ -1,7 +1,7 @@
 #pragma once
 
 #include <mutex>
-#include <Arduino.h>
+//#include <Arduino.h>
 #include <thread>
 
 

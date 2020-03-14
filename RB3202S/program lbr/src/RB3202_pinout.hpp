@@ -1,7 +1,13 @@
 #pragma once
 
+#include <stdio.h>
+
 #include <driver/adc.h>
 #include <driver/gpio.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/ledc.h"
+#include "esp_err.h"
 
 namespace RB3202
 {
@@ -10,8 +16,8 @@ namespace RB3202
 
     static const gpio_num_t MOTOR_PWM0_GPIO = GPIO_NUM_0;
     static const gpio_num_t MOTOR_PWM1_GPIO = GPIO_NUM_16;
-    static const gpio_num_t MOTOR_PWM2_GPIO = GPIO_NUM_17;
-    static const gpio_num_t MOTOR_PWM3_GPIO = GPIO_NUM_5;
+    static const gpio_num_t MOTOR_PWM2_GPIO = GPIO_NUM_5;
+    static const gpio_num_t MOTOR_PWM3_GPIO = GPIO_NUM_17;
     static const gpio_num_t MOTOR_SLEEP_GPIO = GPIO_NUM_2;
 
     static const gpio_num_t ENC_A1_GPIO = GPIO_NUM_15;
@@ -25,8 +31,8 @@ namespace RB3202
     static const gpio_num_t SW_3_GPIO = GPIO_NUM_26;
 
     static const gpio_num_t LED_R_GPIO = GPIO_NUM_21;
-    static const gpio_num_t LED_G_GPIO = GPIO_NUM_22;
-    static const gpio_num_t LED_B_GPIO = GPIO_NUM_23;
+    static const gpio_num_t LED_G_GPIO = GPIO_NUM_36;
+    static const gpio_num_t LED_B_GPIO = GPIO_NUM_39;
 
     static const gpio_num_t SERVO_SMART_GPIO = GPIO_NUM_23;
 };

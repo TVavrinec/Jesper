@@ -48,6 +48,7 @@
         "memory": "cpp",
         "numeric": "cpp",
         "cinttypes": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "random": "cpp"
     }
 }

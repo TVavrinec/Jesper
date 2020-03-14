@@ -1,16 +1,24 @@
-#include <Arduino.h>
+#pragma once
+//#include <Arduino.h>
 
-class RB3202_driver
+#include "RB3202_DRV8833.hpp"
+
+#define FREGUENCY 5000
+#define MAX_PWM 1024
+
+class RB3202_driver: public RB3202_DRV8833
 {
 private:
     void setMotorPwmPins(gpio_num_t pin, uint8_t channel);
-    void setAllMotorPins();
-    
+
     void goForward(bool motor, float pwm);
     void goBack(bool motor, float pwm);
-    void setPwm(bool motor, bool direction, float pwm);
-    
     int pwmPercent(float percent);
+
+protected:
+    void setAllMotorPins();
+
+    void setPwm(bool motor, bool direction, float pwm);
 
 public:
     RB3202_driver();

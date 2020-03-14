@@ -16,8 +16,8 @@ bool RB3202_PID::PID()
 {
     new std::thread([&]()
     {
-        RB3202_encoder encoder0 (RB3202::ENC_A1_GPIO, RB3202::ENC_B1_GPIO);
-        RB3202_encoder encoder1 (RB3202::ENC_A2_GPIO, RB3202::ENC_B2_GPIO);
+        RB3202_encoder encoder0 (RB3202::ENC_B1_GPIO, RB3202::ENC_A1_GPIO);
+        RB3202_encoder encoder1 (RB3202::ENC_B2_GPIO, RB3202::ENC_A2_GPIO);
         encoder0.init();
         encoder1.init();
         while(1) 

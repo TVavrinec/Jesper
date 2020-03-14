@@ -1,4 +1,4 @@
-#include <Arduino.h>
+//#include <Arduino.h>
 #include <thread>
 #include <mutex>
 #include "RB3202_set.hpp"

@@ -1,9 +1,6 @@
 #include "RB3202_pinout.hpp"
 #include "RB3202_driver.hpp"
 
-#define FREGUENCY 1000
-#define MAX_PWM 1024
-
 RB3202_driver::RB3202_driver()
 {
     setMotor();
@@ -19,6 +16,8 @@ void RB3202_driver::setMotorPwmPins(gpio_num_t pin, uint8_t channel)
 void RB3202_driver::setAllMotorPins()
 {
     pinMode(RB3202::MOTOR_SLEEP_GPIO,OUTPUT);
+    digitalWrite(RB3202::MOTOR_SLEEP_GPIO, LOW);
+
     setMotorPwmPins(RB3202::MOTOR_PWM0_GPIO, 0);
     setMotorPwmPins(RB3202::MOTOR_PWM1_GPIO, 1);
     setMotorPwmPins(RB3202::MOTOR_PWM2_GPIO, 2);

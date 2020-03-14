@@ -6,6 +6,11 @@
 #define LED_G 1
 #define LED_B 2
 
+#define SW0 SW_0_GPIO
+#define SW1 SW_1_GPIO
+#define SW2 SW_2_GPIO
+#define SW3 SW_3_GPIO
+
 class rb_periphery
 {
     private:
