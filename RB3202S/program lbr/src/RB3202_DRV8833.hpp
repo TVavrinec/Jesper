@@ -1,8 +1,8 @@
 #pragma once
-#include <Arduino.h>
+//#include <Arduino.h>
 
 #define FREGUENCY               5000
-#define PWM_RESOLUTION          13
+#define PWM_RESOLUTION          LEDC_TIMER_10_BIT
 #define MAX_PWM                 1024
 
 class RB3202_DRV8833

@@ -9,22 +9,33 @@ bool rb_periphery::setPeriphery()
 {
     Serial.begin(115200);
 
-    pinMode(RB3202::LED_R_GPIO, OUTPUT);
-    pinMode(RB3202::LED_G_GPIO, OUTPUT);
-    pinMode(RB3202::LED_B_GPIO, OUTPUT);
+    gpio_set_direction(RB3202::LED_R_GPIO, GPIO_MODE_OUTPUT);
+    gpio_set_direction(RB3202::LED_G_GPIO, GPIO_MODE_OUTPUT);
+    gpio_set_direction(RB3202::LED_B_GPIO, GPIO_MODE_OUTPUT);
+    
+    gpio_set_level(RB3202::LED_R_GPIO, LOW);
+    gpio_set_level(RB3202::LED_G_GPIO, LOW);
+    gpio_set_level(RB3202::LED_B_GPIO, LOW);
 
-    pinMode(RB3202::SW_0_GPIO, INPUT_PULLUP);
-    pinMode(RB3202::SW_1_GPIO, INPUT_PULLUP);
-    pinMode(RB3202::SW_2_GPIO, INPUT_PULLUP);
-    pinMode(RB3202::SW_3_GPIO, INPUT_PULLUP);
+
+    gpio_set_direction(RB3202::SW_0_GPIO, GPIO_MODE_INPUT);
+    gpio_set_direction(RB3202::SW_1_GPIO, GPIO_MODE_INPUT);
+    gpio_set_direction(RB3202::SW_2_GPIO, GPIO_MODE_INPUT);
+    gpio_set_direction(RB3202::SW_3_GPIO, GPIO_MODE_INPUT);
+
+    gpio_pullup_en(RB3202::SW_0_GPIO);
+    gpio_pullup_en(RB3202::SW_1_GPIO);
+    gpio_pullup_en(RB3202::SW_2_GPIO);
+    gpio_pullup_en(RB3202::SW_3_GPIO);
+
 
     new std::thread([&]()
     {
         while(true)
         {
-            digitalWrite(RB3202::LED_R_GPIO, m_led_state[0][0]);
-            digitalWrite(RB3202::LED_G_GPIO, m_led_state[1][0]);
-            digitalWrite(RB3202::LED_B_GPIO, m_led_state[2][0]);
+            gpio_set_level(RB3202::LED_R_GPIO, m_led_state[0][0]);
+            gpio_set_level(RB3202::LED_G_GPIO, m_led_state[1][0]);
+            gpio_set_level(RB3202::LED_B_GPIO, m_led_state[2][0]);
 
             while((m_led_state[0][0] == m_led_state[0][1])
                 &&(m_led_state[1][0] == m_led_state[1][1])
@@ -75,7 +86,7 @@ bool rb_periphery::ledChange(int led)
 
 bool rb_periphery::readButton(gpio_num_t sw)
 {
-    return !digitalRead(sw);
+    return !gpio_get_level(sw);
 }
 
 

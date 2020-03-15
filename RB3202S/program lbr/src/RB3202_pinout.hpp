@@ -9,6 +9,10 @@
 #include "driver/ledc.h"
 #include "esp_err.h"
 
+#define LOW         0
+#define HIGH        1
+#define PI          3.1415926535897932384
+
 namespace RB3202
 {
     static const gpio_num_t BOARD_OFF_GPIO = GPIO_NUM_13;

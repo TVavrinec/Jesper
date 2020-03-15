@@ -23,9 +23,7 @@ private:
 
     volatile float m_p = 0.01;
     volatile float m_d = 5;
-
-    hw_timer_t * timer = NULL;
-
+    
     bool PID();
 
     void (*call_back)();
