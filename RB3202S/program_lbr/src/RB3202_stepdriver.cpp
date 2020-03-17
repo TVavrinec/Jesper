@@ -3,18 +3,18 @@
 
 std::mutex o_stepr_mx;
 
-RB3202_stepdriver::RB3202_stepdriver()
+rb_stepdriver::rb_stepdriver()
 {
 }
 
-void RB3202_stepdriver::calcalateStep()
+void rb_stepdriver::calcalateStep()
 {
 
 }
 
 
 
-bool RB3202_stepdriver::setMotor()
+bool rb_stepdriver::setMotor()
 {
     //setAllMotorPins();
     calcalateStep();
@@ -22,7 +22,7 @@ bool RB3202_stepdriver::setMotor()
     return 1;
 }
 
-bool RB3202_stepdriver::setRotate(float m_step_per_second)
+bool rb_stepdriver::setRotate(float m_step_per_second)
 {
     m_micro_step_period = 10000/m_step_per_second;
     return 1;

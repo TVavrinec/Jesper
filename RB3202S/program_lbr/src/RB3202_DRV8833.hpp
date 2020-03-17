@@ -1,9 +1,10 @@
 #pragma once
-//#include <Arduino.h>
 
-#define FREGUENCY               5000
+#include "RB3202_pinout.hpp"
+
+#define FREGUENCY               5
 #define PWM_RESOLUTION          LEDC_TIMER_10_BIT
-#define MAX_PWM                 1024
+#define MAX_PWM                 1023
 
 class RB3202_DRV8833
 {

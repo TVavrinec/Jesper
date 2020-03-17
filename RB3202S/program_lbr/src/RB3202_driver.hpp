@@ -1,11 +1,6 @@
 #pragma once
-//#include <Arduino.h>
 
 #include "RB3202_DRV8833.hpp"
-
-#define FREGUENCY 5000
-#define MAX_PWM 1024
-#define PWM_RESOLUTION 10
 
 class RB3202_driver: public RB3202_DRV8833
 {

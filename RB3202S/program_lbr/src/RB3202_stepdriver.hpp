@@ -11,10 +11,10 @@
 
 #include "RB3202_driver.hpp"
 
-#define MICRO_STEP 256
-#define PERIOD_MICRO_STEP 0.062831853
+#define MICRO_STEP          256
+#define PERIOD_MICRO_STEP   0.062831853
 
-class RB3202_stepdriver: public RB3202_DRV8833
+class rb_stepdriver: public RB3202_DRV8833
 {
     private:
     double m_wheel_position;
@@ -23,7 +23,7 @@ class RB3202_stepdriver: public RB3202_DRV8833
     void calcalateStep();
 
     public:
-    RB3202_stepdriver();
+    rb_stepdriver();
 
     bool setMotor();
     bool setRotate(float step_per_second);

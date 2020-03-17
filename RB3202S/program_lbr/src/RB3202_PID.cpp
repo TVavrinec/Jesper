@@ -30,7 +30,7 @@ bool RB3202_PID::PID()
                 rotateVirtualWheels(m_wheel_rps[1], 1);
                 setWheelPower(0);
                 setWheelPower(1);
-                usleep(10000);
+                vTaskDelay(10000);
             }
         }
     });
