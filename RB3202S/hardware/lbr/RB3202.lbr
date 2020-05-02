@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -89,6 +89,22 @@
 <wire x1="5.25" y1="-5.25" x2="5.25" y2="5.25" width="0.1524" layer="21"/>
 <wire x1="5.25" y1="5.25" x2="-5.25" y2="5.25" width="0.1524" layer="21"/>
 </package>
+<package name="DFN-8_EP_5.2X6.0X1.27P">
+<smd name="2" x="-0.635" y="-3.305" dx="0.65" dy="0.5" layer="1" rot="R90"/>
+<smd name="1" x="-1.905" y="-3.305" dx="0.65" dy="0.5" layer="1" rot="R90"/>
+<smd name="3" x="0.635" y="-3.305" dx="0.65" dy="0.5" layer="1" rot="R90"/>
+<smd name="4" x="1.905" y="-3.305" dx="0.65" dy="0.5" layer="1" rot="R90"/>
+<smd name="7" x="-0.635" y="2.245" dx="0.65" dy="0.5" layer="1" rot="R90"/>
+<smd name="8" x="-1.905" y="2.245" dx="0.65" dy="0.5" layer="1" rot="R90"/>
+<smd name="6" x="0.635" y="2.245" dx="0.65" dy="0.5" layer="1" rot="R90"/>
+<smd name="5" x="1.905" y="2.245" dx="0.65" dy="0.5" layer="1" rot="R90"/>
+<smd name="9" x="0" y="0" dx="4.6" dy="4.12" layer="1"/>
+<wire x1="-2.6" y1="2.275" x2="-2.6" y2="-3.275" width="0.1524" layer="21"/>
+<wire x1="-2.6" y1="-3.275" x2="2.6" y2="-3.275" width="0.1524" layer="21"/>
+<wire x1="2.6" y1="-3.275" x2="2.6" y2="2.275" width="0.1524" layer="21"/>
+<wire x1="2.6" y1="2.275" x2="-2.6" y2="2.275" width="0.1524" layer="21"/>
+<circle x="-1.905" y="-2.54" radius="0.283978125" width="0.1524" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="TO-263-5">
@@ -111,6 +127,33 @@
 <wire x1="0" y1="0.508" x2="1.016" y2="-0.508" width="0.1524" layer="94"/>
 <wire x1="1.016" y1="-0.508" x2="2.032" y2="0.508" width="0.1524" layer="94"/>
 <wire x1="2.032" y1="0.508" x2="2.54" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="P-MOSFET">
+<pin name="G" x="2.54" y="-5.08" length="short" rot="R90"/>
+<pin name="S" x="5.08" y="0" length="short" rot="R180"/>
+<pin name="D" x="-5.08" y="0" length="short"/>
+<wire x1="2.54" y1="-2.54" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<rectangle x1="-3.3274" y1="-2.286" x2="-1.651" y2="-1.524" layer="94"/>
+<wire x1="-2.54" y1="-1.905" x2="-2.54" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-1.778" width="0.1524" layer="94"/>
+<polygon width="0.1524" layer="94">
+<vertex x="0.762" y="1.651"/>
+<vertex x="-0.762" y="2.667"/>
+<vertex x="-0.762" y="0.635"/>
+</polygon>
+<wire x1="0.762" y1="2.667" x2="0.762" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="1.651" x2="-2.54" y2="1.651" width="0.1524" layer="94"/>
+<circle x="-2.54" y="0" radius="0.254" width="0.381" layer="94"/>
+<circle x="2.54" y="0" radius="0.254" width="0.381" layer="94"/>
+<rectangle x1="-0.7874" y1="-2.286" x2="0.889" y2="-1.524" layer="94"/>
+<rectangle x1="1.7526" y1="-2.286" x2="3.429" y2="-1.524" layer="94"/>
+<polygon width="0.1524" layer="94">
+<vertex x="0" y="0"/>
+<vertex x="-0.889" y="-1.016"/>
+<vertex x="0.889" y="-1.016"/>
+</polygon>
+<wire x1="2.54" y1="1.651" x2="2.54" y2="-1.778" width="0.1524" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -142,6 +185,23 @@
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="WSD30140DN56">
+<gates>
+<gate name="G$1" symbol="P-MOSFET" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DFN-8_EP_5.2X6.0X1.27P">
+<connects>
+<connect gate="G$1" pin="D" pad="5 6 7 8 9"/>
+<connect gate="G$1" pin="G" pad="4"/>
+<connect gate="G$1" pin="S" pad="1 2 3"/>
 </connects>
 <technologies>
 <technology name=""/>
